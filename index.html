@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stephen umeanasonye DevPortfolio</title>
+  <link rel="image" href="">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-gray-700 shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold gradient-text">Dev<span class="text-xl">Portfolio</span></a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link text-primary hover:text-accent-primary transition">About</a>
+        <a href="#projects" class="nav-link text-primary hover:text-accent-primary transition">Projects</a>
+        <a href="#blog" class="nav-link text-primary hover:text-accent-primary transition">Blog</a>
+        <a href="#contact" class="nav-link text-primary hover:text-accent-primary transition">Contact</a>
+        <button id="theme-toggle" class="focus:outline-none text-primary">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none text-primary">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="mobile-menu absolute top-full left-0 right-0 bg-secondary md:hidden shadow-lg">
+      <div class="flex flex-col p-4 space-y-4">
+        <a href="#about" class="text-primary hover:text-accent-primary transition">About</a>
+        <a href="#projects" class="text-primary hover:text-accent-primary transition">Projects</a>
+        <a href="#blog" class="text-primary hover:text-accent-primary transition">Blog</a>
+        <a href="#contact" class="text-primary hover:text-accent-primary transition">Contact</a>
+        <button id="theme-toggle-mobile" class="focus:outline-none text-primary flex items-center">
+          <i class="fas fa-moon mr-2"></i> Toggle Theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section-container flex items-center justify-center bg-primary">
+    <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8">
+      <div class="md:w-1/2 space-y-6 animate__animated animate__fadeInLeft">
+        <h1 class="text-4xl md:text-6xl font-bold">
+          Hey, I'm <span class="gradient-text">UMEANASONYE CHIKA STEPHEN</span>
+        </h1>
+        <p class="text-xl text-secondary">
+          Full Stack Developer & UI/UX Enthusiast.
+        </p>
+        <p class="text-lg text-secondary max-w-lg">
+          I create elegant solutions to complex problems with clean, efficient code and beautiful interfaces.I'm a passionate IT professional with a strong focus on solving complex technical problems and designing clean, user-friendly interfaces. <br> With expertise in both backend systems and frontend experiences, I bridge the gap between functionality and design to deliver solutions that are efficient, intuitive, and impactful. <br>
+
+As an IT problem solver, I specialize in diagnosing and resolving system, software, and network issues with speed and precision. <br> My ability to troubleshoot under pressure and provide reliable solutions makes me a trusted partner in any tech environment. <br>
+
+On the UI/UX side, I create thoughtful, user-centered designs that prioritize usability, accessibility, and aesthetic appeal. <br> Whether it's a web app, mobile interface, or digital product, I design with the end user in
+        </p>
+        <div class="flex space-x-4 pt-4">
+          <a href="#projects" class="btn-primary px-6 py-3 rounded-lg text-white font-medium">
+            View Projects
+          </a>
+          <a href="#contact" class="btn-outline px-6 py-3 rounded-lg text-primary font-medium">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
+        <div class="relative w-64 h-64 md:w-80 md:h-80">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-lg opacity-30"></div>
+          <img 
+            src="me.jpg" 
+            alt="Developer portrait" 
+            class="rounded-full w-full h-full object-cover border-4 border-gray-800 shadow-lg relative z-10"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-container bg-secondary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        About <span class="gradient-text">Me</span>
+      </h2>
+      
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-6">My Journey</h3>
+          <p class="text-secondary mb-6">
+            With over 7 years of experience in web development, I've had the opportunity to work on diverse projects
+            ranging from e-commerce platforms to complex enterprise solutions. My approach combines technical expertise
+            with a strong focus on user experience and business outcomes.
+          </p>
+          <p class="text-secondary mb-6">
+            I believe in continuous learning and staying up-to-date with the latest technologies and best practices
+            in the development world. When I'm not coding, you can find me contributing to open-source projects or
+            sharing knowledge through my technical blog.
+          </p>
+          <p class="text-secondary">
+            My goal is to create software that not only fulfills technical requirements but also delivers
+            exceptional user experiences and business value.
+          </p>
+        </div>
+        
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-6">Skills & Expertise</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-react text-blue-400"></i>
+              <span>React</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-node-js text-green-500"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-js text-yellow-400"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-vuejs text-green-400"></i>
+              <span>Vue.js</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fas fa-database text-blue-300"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-aws text-orange-400"></i>
+              <span>AWS</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-docker text-blue-500"></i>
+              <span>Docker</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-sass text-pink-500"></i>
+              <span>Sass/CSS</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-figma text-purple-400"></i>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fab fa-git-alt text-red-500"></i>
+              <span>Git/GitHub</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fas fa-mobile-alt text-gray-400"></i>
+              <span>Responsive</span>
+            </div>
+            <div class="skill-badge px-4 py-3 rounded-lg bg-secondary flex items-center space-x-2">
+              <i class="fas fa-tachometer-alt text-accent-tertiary"></i>
+              <span>Performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-container bg-primary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        My <span class="gradient-text">Projects</span>
+      </h2>
+      
+      <p class="text-center text-secondary max-w-2xl mx-auto mb-16">
+        Here are some of the projects I've worked on. Each represents a unique challenge and solution.
+      </p>
+      
+      <div class="flex justify-end mb-6">
+        <select id="project-filter" class="bg-secondary text-primary px-4 py-2 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-primary">
+          <option value="all">All Projects</option>
+          <option value="frontend">Frontend</option>
+          <option value="fullstack">Full Stack</option>
+          <option value="mobile">Mobile</option>
+          <option value="design">UI/UX Design</option>
+        </select>
+      </div>
+      
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="frontend,design">
+          <img src="https://cdn.pixabay.com/photo/2017/01/29/13/21/mobile-2017980_960_720.png" alt="E-commerce Dashboard" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">React</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Redux</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">TailwindCSS</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">E-commerce Dashboard</h3>
+            <p class="text-secondary mb-4">A comprehensive dashboard for e-commerce businesses with real-time analytics, inventory management, and order processing.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="fullstack">
+          <img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528_960_720.jpg" alt="Pet Adoption Platform" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Node.js</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Express</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">MongoDB</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Vue.js</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pet Adoption Platform</h3>
+            <p class="text-secondary mb-4">A full-stack application connecting pet owners with adopters, featuring messaging, user profiles, and pet listings.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="mobile,frontend">
+          <img src="https://cdn.pixabay.com/photo/2014/08/05/10/30/iphone-410324_960_720.jpg" alt="Fitness Tracker App" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">React Native</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Firebase</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Expo</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Fitness Tracker App</h3>
+            <p class="text-secondary mb-4">A cross-platform mobile app for tracking workouts, setting goals, and monitoring health metrics with social features.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="design,frontend">
+          <img src="https://cdn.pixabay.com/photo/2019/10/03/12/12/alpine-4523450_960_720.jpg" alt="Travel Booking UI" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Figma</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">HTML</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">SCSS</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">JavaScript</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Travel Booking UI</h3>
+            <p class="text-secondary mb-4">A modern interface for a travel booking service with an emphasis on user experience and visual appeal.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="fullstack,frontend">
+          <img src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg" alt="Astronomy Social Network" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Next.js</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">GraphQL</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">PostgreSQL</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Astronomy Social Network</h3>
+            <p class="text-secondary mb-4">A community platform for astronomy enthusiasts to share observations, images, and organize stargazing events.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="mobile,fullstack">
+          <img src="https://cdn.pixabay.com/photo/2017/08/07/19/07/books-2606859_960_720.jpg" alt="Digital Library System" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Flutter</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">Django</span>
+              <span class="project-tag text-xs px-2 py-1 rounded text-white">REST API</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Digital Library System</h3>
+            <p class="text-secondary mb-4">A full-featured digital library with book tracking, recommendations, and reading progress synchronization across devices.</p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
+                Live Demo
+              </a>
+              <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section-container bg-secondary">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          My <span class="gradient-text">Blog</span>
+        </h2>
+        <button id="admin-toggle" class="btn-outline px-3 py-2 rounded text-primary text-sm">
+          Admin Mode
+        </button>
+      </div>
+      
+      <!-- Blog Post Form (hidden by default) -->
+      <div id="blog-post-form" class="hidden bg-secondary rounded-lg p-6 mb-12 shadow-lg border border-gray-700">
+        <h3 class="text-2xl font-bold mb-6">Create New Post</h3>
+        <form id="new-blog-form" class="space-y-6">
+          <div>
+            <label class="block text-primary mb-2" for="post-title">Title</label>
+            <input 
+              type="text" 
+              id="post-title" 
+              class="w-full p-3 rounded-lg bg-primary text-primary border border-gray-700 focus:outline-none focus:border-accent-primary"
+              placeholder="Enter post title"
+            >
+          </div>
+          
+          <div>
+            <label class="block text-primary mb-2" for="post-content">Content</label>
+            <textarea 
+              id="post-content" 
+              class="w-full p-3 rounded-lg bg-primary text-primary border border-gray-700 focus:outline-none focus:border-accent-primary min-h-[200px]"
+              placeholder="Write your post content here..."
+            ></textarea>
+          </div>
+          
+          <div>
+            <label class="block text-primary mb-2" for="featured-image">Featured Image URL</label>
+            <input 
+              type="text" 
+              id="featured-image" 
+              class="w-full p-3 rounded-lg bg-primary text-primary border border-gray-700 focus:outline-none focus:border-accent-primary"
+              placeholder="Enter image URL"
+            >
+          </div>
+          
+          <div class="flex justify-end space-x-4">
+            <button type="button" id="save-draft" class="btn-outline px-6 py-3 rounded text-primary">Save as Draft</button>
+            <button type="submit" class="btn-primary px-6 py-3 rounded text-white">Publish Post</button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Blog Posts -->
+      <div id="blog-posts" class="space-y-8">
+        <!-- Blog Post 1 -->
+        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-secondary">March 15, 2025</span>
+              <span class="text-xs px-3 py-1 bg-accent-primary text-white rounded-full">Development</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">The Future of Web Development with WebAssembly</h3>
+            <p class="text-secondary mb-4">
+              Exploring how WebAssembly is changing the game for performance-critical web applications and opening
+              new possibilities for languages beyond JavaScript in the browser.
+            </p>
+            <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
+            
+            <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
+              <p class="text-secondary mb-4">
+                WebAssembly (often abbreviated as Wasm) represents one of the most significant advancements in web technology in recent years.
+                Unlike JavaScript, which is interpreted at runtime, WebAssembly code is compiled ahead of time and can run at near-native speeds,
+                opening up new possibilities for performance-intensive applications on the web.
+              </p>
+              <p class="text-secondary mb-4">
+                One of the most exciting aspects of WebAssembly is that it allows developers to use languages other than JavaScript
+                for client-side web development. Languages like C++, Rust, and Go can now be compiled to WebAssembly and run efficiently in the browser.
+                This means developers can leverage existing codebases and expertise in these languages to build web applications.
+              </p>
+              <p class="text-secondary mb-4">
+                The implications for fields like gaming, video editing, 3D rendering, and scientific computing are profound.
+                Tasks that would have been impossible or impractically slow in JavaScript can now be performed smoothly in the browser.
+              </p>
+              <p class="text-secondary">
+                While WebAssembly won't replace JavaScript (they're designed to work together), it's expanding what's possible on the web
+                and blurring the line between web and native applications. The future looks bright for this technology as it matures
+                and gains broader adoption across the development community.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Blog Post 2 -->
+        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-secondary">February 28, 2025</span>
+              <span class="text-xs px-3 py-1 bg-accent-secondary text-white rounded-full">Design</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Rethinking UI Design for Dark Mode</h3>
+            <p class="text-secondary mb-4">
+              Dark mode isn't just about inverting colors. Learn the principles of creating effective and 
+              aesthetically pleasing dark mode interfaces that improve user experience.
+            </p>
+            <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
+            
+            <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
+              <p class="text-secondary mb-4">
+                Dark mode has evolved from a novelty feature to a standard expectation in modern applications.
+                While it offers benefits like reduced eye strain in low-light conditions and potential energy savings on OLED screens,
+                designing an effective dark mode requires more thoughtful consideration than simply inverting colors.
+              </p>
+              <p class="text-secondary mb-4">
+                One key principle is understanding contrast ratios. Text should maintain WCAG compliance with appropriate contrast
+                against darker backgrounds. Pure white text on pure black backgrounds can create uncomfortable visual vibration effects,
+                so slightly muted whites (like #F1F5F9) on dark gray backgrounds (like #121212) often work better.
+              </p>
+              <p class="text-secondary mb-4">
+                Color psychology works differently in dark contexts too. Vibrant colors that look balanced in light mode can appear
+                overly intense in dark mode. Consider reducing saturation while increasing brightness for accent colors in dark interfaces.
+              </p>
+              <p class="text-secondary">
+                Remember that dark mode isn't just an aesthetic choice—it's a functional one. Test your designs in various lighting conditions
+                and consider how different elements (shadows, elevation, boundaries) need to be reimagined when the background is dark.
+                The most successful dark modes feel intentional rather than automatically generated.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Blog Post 3 -->
+        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-secondary">January 10, 2025</span>
+              <span class="text-xs px-3 py-1 bg-accent-tertiary text-white rounded-full">Career</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Building a Developer Portfolio That Stands Out</h3>
+            <p class="text-secondary mb-4">
+              In a competitive job market, your portfolio can set you apart. Discover strategies for showcasing
+              your projects and skills in a way that captures attention and demonstrates your capabilities.
+            </p>
+            <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
+            
+            <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
+              <p class="text-secondary mb-4">
+                Your developer portfolio is often the first impression you make on potential employers or clients. In today's
+                competitive landscape, having a collection of GitHub repositories isn't enough—you need a thoughtfully curated
+                showcase that tells your story as a developer.
+              </p>
+              <p class="text-secondary mb-4">
+                Focus on quality over quantity. Three well-documented, polished projects are more impressive than a dozen
+                half-finished ones. For each featured project, clearly explain the problem it solves, the technologies used,
+                your specific contributions (especially for team projects), and any challenges you overcame.
+              </p>
+              <p class="text-secondary mb-4">
+                Don't underestimate the impact of design. Even if you're a backend developer, a clean, responsive, and
+                accessible portfolio site demonstrates attention to detail and user experience awareness—qualities valued
+                across all development roles.
+              </p>
+              <p class="text-secondary">
+                Personalize your portfolio to reflect your unique journey and interests. Whether it's an unconventional
+                career path, an interesting side project, or contributions to social impact initiatives, these details
+                help you stand out and give interviewers something memorable to connect with beyond technical skills.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <!-- Contact Section -->
+  <section id="contact" class="section-container bg-primary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Get In <span class="gradient-text">Touch</span>
+      </h2>
+      
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Left Column: Contact Info -->
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
+          <p class="text-secondary mb-8">
+            Have a project in mind or just want to chat about technology? I'm always open to discussing new opportunities, 
+            collaborations, or just sharing ideas.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                <i class="fas fa-envelope text-accent-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Email</h4>
+                <a href="mailto:stephenumeanasonye@gmail.com" class="text-secondary hover:text-accent-primary transition">stephenumeanasonye@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-accent-secondary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Location</h4>
+                <p class="text-secondary">Lagos, Nigeria.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                <i class="fas fa-calendar-alt text-accent-tertiary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium">Availability</h4>
+                <p class="text-secondary">Open to freelance & full-time opportunities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Contact Form -->
+        <div class="md:w-1/2">
+          <form 
+            id="contact-form" 
+            class="contact-form space-y-6"
+            action="https://formspree.io/f/mldppbyn" 
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New message from your DevPortfolio!">
+            
+            <div>
+              <label class="block text-primary mb-2" for="name">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"  
+                class="w-full p-3 rounded-lg bg-secondary text-primary border border-gray-700 focus:outline-none"
+                placeholder="Your name"
+                required
+              >
+            </div>
+            
+            <div>
+              <label class="block text-primary mb-2" for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="w-full p-3 rounded-lg bg-secondary text-primary border border-gray-700 focus:outline-none"
+                placeholder="Your email"
+                required
+              >
+            </div>
+            
+            <div>
+              <label class="block text-primary mb-2" for="subject">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                class="w-full p-3 rounded-lg bg-secondary text-primary border border-gray-700 focus:outline-none"
+                placeholder="Subject"
+              >
+            </div>
+            
+            <div>
+              <label class="block text-primary mb-2" for="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                class="w-full p-3 rounded-lg bg-secondary text-primary border border-gray-700 focus:outline-none min-h-[150px]"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            
+            <div class="pt-4">
+              <button type="submit" class="btn-primary px-8 py-4 rounded-lg text-white font-medium w-full">
+                Send Message
+              </button>
+            </div>
+          </form>
+          
+          <div id="form-success" class="hidden mt-6 p-4 bg-green-800 bg-opacity-20 border border-green-500 rounded-lg">
+            <p class="text-green-400 flex items-center">
+              <i class="fas fa-check-circle mr-2"></i>
+              Message sent successfully! I'll get back to you soon.
+            </p>
+          </div>
+          
+          <div id="form-error" class="hidden mt-6 p-4 bg-red-800 bg-opacity-20 border border-red-500 rounded-lg">
+            <p class="text-red-400 flex items-center">
+              <i class="fas fa-exclamation-circle mr-2"></i>
+              There was an error sending your message. Please try again.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
