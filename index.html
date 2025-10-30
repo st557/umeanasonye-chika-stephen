@@ -631,4 +631,334 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
         </div>
       </div>
     </div>
+
   </section>
+   <!-- Footer -->
+  <footer class="bg-secondary py-12 border-t border-custom">
+    <div class="container mx-auto px-4">
+      <div class="footer-content flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#home" class="text-2xl font-bold gradient-text">Dev<span class="text-xl">Portfolio</span></a>
+          <p class="text-secondary mt-2">Building the web, one line at a time.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="flex space-x-6">
+            <a href="https://github.com/yourusername" target="_blank" class="social-icon text-primary text-2xl" 
+               title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon text-primary text-2xl"
+               title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" class="social-icon text-primary text-2xl"
+               title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://dev.to/yourusername" target="_blank" class="social-icon text-primary text-2xl"
+               title="Dev.to">
+              <i class="fab fa-dev"></i>
+            </a>
+          </div>
+          
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-phone text-accent-secondary"></i>
+            <a href="tel:+2349138953587" class="text-secondary hover:text-accent-primary transition">
+              +234 913 895 3587
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-custom flex flex-col md:flex-row justify-between items-center">
+        <p class="text-secondary text-sm mb-4 md:mb-0">
+          © 2025 stephen umeanasonye. All rights reserved.
+        </p>
+
+        <div class="footer-links flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
+          <a href="javascript:void(0)" class="text-secondary hover:text-accent-primary transition text-sm">Privacy
+            Policy</a>
+          <a href="javascript:void(0)" class="text-secondary hover:text-accent-primary transition text-sm">Terms of
+            Service</a>
+          <a href="javascript:void(0)" class="text-secondary hover:text-accent-primary transition text-sm">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script id="app-script">
+    // DOM Elements
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const projectFilter = document.getElementById('project-filter');
+    const projectsGrid = document.getElementById('projects-grid');
+    const readMoreButtons = document.querySelectorAll('.read-more');
+    const adminToggle = document.getElementById('admin-toggle');
+    const blogPostForm = document.getElementById('blog-post-form');
+    const newBlogForm = document.getElementById('new-blog-form');
+    const saveDraftBtn = document.getElementById('save-draft');
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    // Theme Toggle
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.body.className = savedTheme;
+      updateThemeIcon(savedTheme);
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.body.className;
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.body.className = newTheme;
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    }
+
+    function updateThemeIcon(theme) {
+      const icon = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+      const iconHtml = `<i class="fas ${icon} text-xl"></i>`;
+      
+      // Update desktop theme toggle
+      if (themeToggle) {
+        themeToggle.innerHTML = iconHtml;
+      }
+      
+      // Update mobile theme toggle
+      if (themeToggleMobile) {
+        themeToggleMobile.innerHTML = iconHtml;
+      }
+    }
+
+    // Add event listeners for theme toggles
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    if (themeToggleMobile) {
+      themeToggleMobile.addEventListener('click', toggleTheme);
+    }
+
+    // Mobile Menu Toggle
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileMenu.classList.contains('open') ? 'fa-times' : 'fa-bars';
+        mobileMenuButton.innerHTML = `<i class="fas ${icon} text-xl"></i>`;
+      });
+    }
+
+    // Project Filtering
+    if (projectFilter && projectsGrid) {
+      projectFilter.addEventListener('change', () => {
+        const category = projectFilter.value;
+        const projects = projectsGrid.querySelectorAll('.project-card');
+
+        projects.forEach(project => {
+          if (category === 'all' || project.dataset.categories.includes(category)) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Read More Toggle
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const fullPost = button.nextElementSibling;
+        fullPost.classList.toggle('hidden');
+        button.textContent = fullPost.classList.contains('hidden') ? 'Read More' : 'Read Less';
+      });
+    });
+
+    // Admin Mode Toggle
+    if (adminToggle && blogPostForm) {
+      adminToggle.addEventListener('click', () => {
+        blogPostForm.classList.toggle('hidden');
+        if (!blogPostForm.classList.contains('hidden')) {
+          // Initialize TinyMCE or other rich text editor if available
+          if (typeof tinymce !== 'undefined') {
+            tinymce.init({
+              selector: '#post-content',
+              height: 300,
+              menubar: false,
+              plugins: 'link image code',
+              toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright | code'
+            });
+          }
+
+          // Restore draft if available
+          const savedDraft = localStorage.getItem('blogDraft');
+          if (savedDraft) {
+            const draft = JSON.parse(savedDraft);
+            const titleField = document.getElementById('post-title');
+            const contentField = document.getElementById('post-content');
+            const imageField = document.getElementById('featured-image');
+            
+            if (titleField) titleField.value = draft.title || '';
+            if (contentField) contentField.value = draft.content || '';
+            if (imageField) imageField.value = draft.image || '';
+          }
+        }
+      });
+    }
+
+    // Save Draft
+    if (saveDraftBtn) {
+      saveDraftBtn.addEventListener('click', () => {
+        const titleField = document.getElementById('post-title');
+        const contentField = document.getElementById('post-content');
+        const imageField = document.getElementById('featured-image');
+        
+        const draft = {
+          title: titleField ? titleField.value : '',
+          content: contentField ? contentField.value : '',
+          image: imageField ? imageField.value : ''
+        };
+
+        localStorage.setItem('blogDraft', JSON.stringify(draft));
+
+        // Show temporary saved notification
+        const notification = document.createElement('div');
+        notification.className = 'fixed bottom-4 right-4 bg-accent-primary text-white px-4 py-2 rounded shadow-lg z-50';
+        notification.textContent = 'Draft saved!';
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.remove();
+        }, 3000);
+      });
+    }
+
+    // New Blog Form Submit
+    if (newBlogForm) {
+      newBlogForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // In a real app, this would send data to the server
+        // For now, just show a success message
+        const notification = document.createElement('div');
+        notification.className = 'fixed bottom-4 right-4 bg-accent-primary text-white px-4 py-2 rounded shadow-lg z-50';
+        notification.textContent = 'Post published successfully!';
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.remove();
+
+          // Clear form and draft storage
+          newBlogForm.reset();
+          localStorage.removeItem('blogDraft');
+          if (blogPostForm) blogPostForm.classList.add('hidden');
+
+          // In a real app, we would refresh the blog posts list here
+        }, 3000);
+      });
+    }
+
+    // Contact Form Submit with Formspree
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span class="loading"></span> Sending...';
+        submitButton.disabled = true;
+        
+        const formData = new FormData(contactForm);
+        
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            if (formSuccess) formSuccess.classList.remove('hidden');
+            if (formError) formError.classList.add('hidden');
+            contactForm.reset();
+            
+            setTimeout(() => {
+              if (formSuccess) formSuccess.classList.add('hidden');
+            }, 5000);
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          if (formError) formError.classList.remove('hidden');
+          if (formSuccess) formSuccess.classList.add('hidden');
+          
+          setTimeout(() => {
+            if (formError) formError.classList.add('hidden');
+          }, 5000);
+        } finally {
+          submitButton.innerHTML = originalText;
+          submitButton.disabled = false;
+        }
+      });
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Close mobile menu if open
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileMenuButton) {
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+          }
+        }
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Update active nav link
+          document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+          });
+          this.classList.add('active');
+        }
+      });
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+
+      // Add intersection observer for animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeIn');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+
+</html>
