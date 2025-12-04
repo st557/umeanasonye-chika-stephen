@@ -25,13 +25,116 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Custom styles for clean navigation -->
+  <style>
+    /* Clean Navigation Styles */
+    .nav-container {
+      backdrop-filter: blur(10px);
+      background-color: rgba(17, 24, 39, 0.8);
+      transition: all 0.3s ease;
+    }
+    
+    .light .nav-container {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      background-color: #6d28d9;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+      left: 0;
+    }
+    
+    .hamburger {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: currentColor;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .hamburger span:nth-child(1) {
+      top: 0px;
+    }
+    
+    .hamburger span:nth-child(2) {
+      top: 8px;
+    }
+    
+    .hamburger span:nth-child(3) {
+      top: 16px;
+    }
+    
+    .hamburger.open span:nth-child(1) {
+      top: 8px;
+      transform: rotate(135deg);
+    }
+    
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    
+    .hamburger.open span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-135deg);
+    }
+    
+    .mobile-menu {
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .theme-toggle-btn {
+      transition: transform 0.3s ease;
+    }
+    
+    .theme-toggle-btn:hover {
+      transform: rotate(180deg);
+    }
+  </style>
 </head>
 <body class="dark">
   <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-4643369408413863">
 </amp-auto-ads>
-  <!-- Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-gray-700 shadow-lg">
+  <!-- Clean Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-container border-b border-gray-700 shadow-lg">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
       <a href="#home" class="text-2xl font-bold gradient-text">Dev<span class="text-xl">Portfolio</span></a>
       
@@ -41,27 +144,31 @@
         <a href="#projects" class="nav-link text-primary hover:text-accent-primary transition">Projects</a>
         <a href="#blog" class="nav-link text-primary hover:text-accent-primary transition">Blog</a>
         <a href="#contact" class="nav-link text-primary hover:text-accent-primary transition">Contact</a>
-        <button id="theme-toggle" class="focus:outline-none text-primary">
+        <button id="theme-toggle" class="theme-toggle-btn focus:outline-none text-primary ml-4">
           <i class="fas fa-moon"></i>
         </button>
       </div>
 
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none text-primary">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
+      <!-- Mobile Hamburger Menu -->
+      <div class="md:hidden flex items-center space-x-4">
+        <button id="theme-toggle-mobile" class="theme-toggle-btn focus:outline-none text-primary">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div id="hamburger" class="hamburger text-primary">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="mobile-menu absolute top-full left-0 right-0 bg-secondary md:hidden shadow-lg">
       <div class="flex flex-col p-4 space-y-4">
-        <a href="#about" class="text-primary hover:text-accent-primary transition">About</a>
-        <a href="#projects" class="text-primary hover:text-accent-primary transition">Projects</a>
-        <a href="#blog" class="text-primary hover:text-accent-primary transition">Blog</a>
-        <a href="#contact" class="text-primary hover:text-accent-primary transition">Contact</a>
-        <button id="theme-toggle-mobile" class="focus:outline-none text-primary flex items-center">
-          <i class="fas fa-moon mr-2"></i> Toggle Theme
-        </button>
+        <a href="#about" class="text-primary hover:text-accent-primary transition py-2">About</a>
+        <a href="#projects" class="text-primary hover:text-accent-primary transition py-2">Projects</a>
+        <a href="#blog" class="text-primary hover:text-accent-primary transition py-2">Blog</a>
+        <a href="#contact" class="text-primary hover:text-accent-primary transition py-2">Contact</a>
       </div>
     </div>
   </header>
@@ -734,7 +841,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
     // DOM Elements
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     const projectFilter = document.getElementById('project-filter');
     const projectsGrid = document.getElementById('projects-grid');
@@ -764,7 +871,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
 
     function updateThemeIcon(theme) {
       const icon = theme === 'dark' ? 'fa-sun' : 'fa-moon';
-      const iconHtml = `<i class="fas ${icon} text-xl"></i>`;
+      const iconHtml = `<i class="fas ${icon}"></i>`;
       
       // Update desktop theme toggle
       if (themeToggle) {
@@ -786,14 +893,22 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
       themeToggleMobile.addEventListener('click', toggleTheme);
     }
 
-    // Mobile Menu Toggle
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
+    // Mobile Menu Toggle with Hamburger Animation
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
         mobileMenu.classList.toggle('open');
-        const icon = mobileMenu.classList.contains('open') ? 'fa-times' : 'fa-bars';
-        mobileMenuButton.innerHTML = `<i class="fas ${icon} text-xl"></i>`;
       });
     }
+
+    // Close mobile menu when a link is clicked
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
 
     // Project Filtering
     if (projectFilter && projectsGrid) {
@@ -958,8 +1073,8 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
         // Close mobile menu if open
         if (mobileMenu && mobileMenu.classList.contains('open')) {
           mobileMenu.classList.remove('open');
-          if (mobileMenuButton) {
-            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+          if (hamburger) {
+            hamburger.classList.remove('open');
           }
         }
 
@@ -1005,6 +1120,3 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
 </body>
 
 </html>
-
-
-
