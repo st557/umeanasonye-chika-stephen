@@ -852,6 +852,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
 
   <script id="app-script">
     <script>
+<script>
 // Add to your existing app-script
 
 // FAQ Toggle
@@ -880,6 +881,10 @@ if (newsletterForm) {
     setTimeout(() => {
       notification.remove();
     }, 3000);
+    
+    newsletterForm.reset();
+  });
+}
     // DOM Elements
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
@@ -1162,5 +1167,6 @@ if (newsletterForm) {
 </body>
 
 </html>
+
 
 
