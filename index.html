@@ -851,6 +851,35 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
   </footer>
 
   <script id="app-script">
+    <script>
+// Add to your existing app-script
+
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('i');
+    
+    answer.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  });
+});
+
+// Newsletter Form
+const newsletterForm = document.querySelector('#newsletter form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Show success message
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-4 right-4 bg-accent-primary text-white px-4 py-2 rounded shadow-lg z-50';
+    notification.textContent = 'Successfully subscribed to newsletter!';
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
     // DOM Elements
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
@@ -1133,4 +1162,5 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
 </body>
 
 </html>
+
 
