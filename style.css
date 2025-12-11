@@ -210,4 +210,130 @@ body {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(var(--accent-primary), var(--accent-secondary));
   border-radius: 4px;
+
+}
+/* Resource Cards */
+.resource-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 3px solid var(--accent-primary);
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* FAQ Section */
+.faq-question {
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: var(--bg-primary);
+}
+
+.faq-question i {
+  transition: transform 0.3s;
+}
+
+.faq-question i.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 3px solid var(--accent-secondary);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* Newsletter Section */
+#newsletter input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.2);
+}
+
+/* Project Details and Outcomes */
+.tech-details, .project-outcomes {
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.tech-details h4, .project-outcomes h4 {
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+/* Blog Post Code Blocks */
+.full-post pre {
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.full-post code {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--text-secondary);
+}
+
+/* Blog Post Lists */
+.full-post ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.full-post li {
+  margin-bottom: 8px;
+}
+
+/* Blog Post Headings */
+.full-post h4 {
+  color: var(--accent-primary);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent-primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 4rem 1rem;
+  }
+  
+  .resource-card, .testimonial-card {
+    margin-bottom: 1.5rem;
+  }
 }
