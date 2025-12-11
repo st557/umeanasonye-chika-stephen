@@ -11,10 +11,10 @@
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
   <!-- Favicon -->
-  <link rel="icon" type="me-fotor-bg-remover-20251210143410.png" sizes="32x32" href="me.jpg">
-  <link rel="icon" type="me-fotor-bg-remover-20251210143410.png" sizes="16x16" href="me.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="me-fotor-bg-remover-20251210143410.png">
-  <link rel="shortcut icon" href="me-fotor-bg-remover-20251210143410.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="me.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="me.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="me.jpg">
+  <link rel="shortcut icon" href="me.jpg">
   <meta name="theme-color" content="#6d28d9">
   
   <link rel="image" href="">
@@ -140,28 +140,18 @@
       
       <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
-  <a href="#about" class="nav-link text-primary hover:text-accent-primary transition">About</a>
-  <a href="#projects" class="nav-link text-primary hover:text-accent-primary transition">Projects</a>
-  <a href="#resources" class="nav-link text-primary hover:text-accent-primary transition">Resources</a>
-  <a href="#blog" class="nav-link text-primary hover:text-accent-primary transition">Blog</a>
-  <a href="#faq" class="nav-link text-primary hover:text-accent-primary transition">FAQ</a>
-  <a href="#contact" class="nav-link text-primary hover:text-accent-primary transition">Contact</a>
-  <button id="theme-toggle" class="theme-toggle-btn focus:outline-none text-primary ml-4">
-    <i class="fas fa-moon"></i>
-  </button>
-</div>
+        <a href="#about" class="nav-link text-primary hover:text-accent-primary transition">About</a>
+        <a href="#projects" class="nav-link text-primary hover:text-accent-primary transition">Projects</a>
+        <a href="#resources" class="nav-link text-primary hover:text-accent-primary transition">Resources</a>
+        <a href="#blog" class="nav-link text-primary hover:text-accent-primary transition">Blog</a>
+        <a href="#faq" class="nav-link text-primary hover:text-accent-primary transition">FAQ</a>
+        <a href="#testimonials" class="nav-link text-primary hover:text-accent-primary transition">Testimonials</a>
+        <a href="#contact" class="nav-link text-primary hover:text-accent-primary transition">Contact</a>
+        <button id="theme-toggle" class="theme-toggle-btn focus:outline-none text-primary ml-4">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
 
-<!-- Update mobile navigation -->
-<div id="mobile-menu" class="mobile-menu absolute top-full left-0 right-0 bg-secondary md:hidden shadow-lg">
-  <div class="flex flex-col p-4 space-y-4">
-    <a href="#about" class="text-primary hover:text-accent-primary transition py-2">About</a>
-    <a href="#projects" class="text-primary hover:text-accent-primary transition py-2">Projects</a>
-    <a href="#resources" class="text-primary hover:text-accent-primary transition py-2">Resources</a>
-    <a href="#blog" class="text-primary hover:text-accent-primary transition py-2">Blog</a>
-    <a href="#faq" class="text-primary hover:text-accent-primary transition py-2">FAQ</a>
-    <a href="#contact" class="text-primary hover:text-accent-primary transition py-2">Contact</a>
-  </div>
-</div>
       <!-- Mobile Hamburger Menu -->
       <div class="md:hidden flex items-center space-x-4">
         <button id="theme-toggle-mobile" class="theme-toggle-btn focus:outline-none text-primary">
@@ -180,7 +170,10 @@
       <div class="flex flex-col p-4 space-y-4">
         <a href="#about" class="text-primary hover:text-accent-primary transition py-2">About</a>
         <a href="#projects" class="text-primary hover:text-accent-primary transition py-2">Projects</a>
+        <a href="#resources" class="text-primary hover:text-accent-primary transition py-2">Resources</a>
         <a href="#blog" class="text-primary hover:text-accent-primary transition py-2">Blog</a>
+        <a href="#faq" class="text-primary hover:text-accent-primary transition py-2">FAQ</a>
+        <a href="#testimonials" class="text-primary hover:text-accent-primary transition py-2">Testimonials</a>
         <a href="#contact" class="text-primary hover:text-accent-primary transition py-2">Contact</a>
       </div>
     </div>
@@ -216,7 +209,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
         <div class="relative w-64 h-64 md:w-80 md:h-80">
           <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-lg opacity-30"></div>
           <img 
-            src="me-fotor-bg-remover-20251210143410.png" 
+            src="me.jpg" 
             alt="Developer portrait" 
             class="rounded-full w-full h-full object-cover border-4 border-gray-800 shadow-lg relative z-10"
           >
@@ -341,6 +334,26 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">E-commerce Dashboard</h3>
             <p class="text-secondary mb-4">A comprehensive dashboard for e-commerce businesses with real-time analytics, inventory management, and order processing.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• React with Redux for state management</li>
+                <li>• Chart.js for data visualization</li>
+                <li>• RESTful API integration</li>
+                <li>• Responsive design with Tailwind CSS</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Increased client revenue by 28% through improved inventory tracking and analytics.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -364,6 +377,29 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">Pet Adoption Platform</h3>
             <p class="text-secondary mb-4">A full-stack application connecting pet owners with adopters, featuring messaging, user profiles, and pet listings.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• RESTful API with Express.js and JWT authentication</li>
+                <li>• Real-time messaging using Socket.io</li>
+                <li>• MongoDB with Mongoose ODM for data modeling</li>
+                <li>• Vue.js frontend with Vuex for state management</li>
+                <li>• Responsive design with Tailwind CSS</li>
+                <li>• Docker containerization for deployment</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Increased pet adoption rates by 45% for partner shelters. 
+                Reduced average time to adoption from 45 days to 22 days.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -386,6 +422,26 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">Fitness Tracker App</h3>
             <p class="text-secondary mb-4">A cross-platform mobile app for tracking workouts, setting goals, and monitoring health metrics with social features.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• React Native with Expo for cross-platform development</li>
+                <li>• Firebase for authentication and real-time data sync</li>
+                <li>• Integration with health APIs for accurate tracking</li>
+                <li>• Social features with real-time messaging</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Achieved 4.8-star rating on app stores with over 50,000 active users.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -420,6 +476,26 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">Travel Booking UI</h3>
             <p class="text-secondary mb-4">A modern interface for a travel booking service with an emphasis on user experience and visual appeal.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• Figma for design prototyping and user testing</li>
+                <li>• Semantic HTML5 with accessibility in mind</li>
+                <li>• SCSS for modular and maintainable styles</li>
+                <li>• Vanilla JavaScript for interactive components</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Reduced booking abandonment by 32% through improved user flow and simplified checkout process.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -442,6 +518,27 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">Astronomy Social Network</h3>
             <p class="text-secondary mb-4">A community platform for astronomy enthusiasts to share observations, images, and organize stargazing events.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• Next.js with server-side rendering for performance</li>
+                <li>• GraphQL API with Apollo Server</li>
+                <li>• PostgreSQL with Prisma ORM</li>
+                <li>• Image optimization and processing</li>
+                <li>• Real-time notifications with WebSockets</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Grew to 10,000+ active users within 6 months of launch with 95% positive feedback.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -464,6 +561,27 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
             <h3 class="text-xl font-bold mb-2">Digital Library System</h3>
             <p class="text-secondary mb-4">A full-featured digital library with book tracking, recommendations, and reading progress synchronization across devices.</p>
+            
+            <!-- Added detailed technical information -->
+            <div class="tech-details mb-4">
+              <h4 class="font-semibold mb-2">Technical Implementation:</h4>
+              <ul class="text-sm text-secondary space-y-1">
+                <li>• Flutter for cross-platform mobile development</li>
+                <li>• Django REST Framework for backend API</li>
+                <li>• PostgreSQL for data storage</li>
+                <li>• Machine learning for book recommendations</li>
+                <li>• Real-time sync across devices</li>
+              </ul>
+            </div>
+            
+            <!-- Added project outcomes -->
+            <div class="project-outcomes mb-4">
+              <h4 class="font-semibold mb-2">Project Outcomes:</h4>
+              <p class="text-sm text-secondary">
+                Partnered with 3 major publishers and increased user reading time by 40% through personalized recommendations.
+              </p>
+            </div>
+            
             <div class="flex space-x-4">
               <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
                 Live Demo
@@ -478,8 +596,91 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
     </div>
   </section>
 
+  <!-- Resources Section -->
+  <section id="resources" class="section-container bg-secondary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Developer <span class="gradient-text">Resources</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Resource 1 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-code text-accent-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Code Snippets Library</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            A collection of reusable code snippets for common development tasks across multiple languages.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Explore Snippets</a>
+        </div>
+        
+        <!-- Resource 2 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-tools text-accent-secondary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Development Tools</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            Curated list of essential tools and extensions that improve productivity and code quality.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">View Tools</a>
+        </div>
+        
+        <!-- Resource 3 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-book text-accent-tertiary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Learning Paths</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            Structured learning guides for mastering different technologies and frameworks.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Start Learning</a>
+        </div>
+        
+        <!-- Resource 4 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-palette text-accent-primary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">UI Components</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            A library of reusable UI components built with modern frameworks and best practices.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Browse Components</a>
+        </div>
+        
+        <!-- Resource 5 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-download text-accent-secondary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Free Templates</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            Downloadable templates for common project types to kickstart your development.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Get Templates</a>
+        </div>
+        
+        <!-- Resource 6 -->
+        <div class="resource-card bg-primary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-video text-accent-tertiary text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Video Tutorials</h3>
+          </div>
+          <p class="text-secondary mb-4">
+            Step-by-step video guides covering various development topics and techniques.
+          </p>
+          <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Watch Videos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Section -->
-  <section id="blog" class="section-container bg-secondary">
+  <section id="blog" class="section-container bg-primary">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold">
@@ -533,7 +734,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
       <!-- Blog Posts -->
       <div id="blog-posts" class="space-y-8">
         <!-- Blog Post 1 -->
-        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+        <article class="blog-post bg-secondary rounded-lg overflow-hidden shadow-lg">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
               <span class="text-sm text-secondary">March 15, 2025</span>
@@ -571,7 +772,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
         </article>
         
         <!-- Blog Post 2 -->
-        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+        <article class="blog-post bg-secondary rounded-lg overflow-hidden shadow-lg">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
               <span class="text-sm text-secondary">February 28, 2025</span>
@@ -609,7 +810,7 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
         </article>
         
         <!-- Blog Post 3 -->
-        <article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
+        <article class="blog-post bg-secondary rounded-lg overflow-hidden shadow-lg">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
               <span class="text-sm text-secondary">January 10, 2025</span>
@@ -646,256 +847,352 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
             </div>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-  <!-- Blog Post 4 - Technical Tutorial -->
-<article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
-  <div class="p-6">
-    <div class="flex justify-between items-center mb-4">
-      <span class="text-sm text-secondary">April 5, 2025</span>
-      <span class="text-xs px-3 py-1 bg-accent-primary text-white rounded-full">Tutorial</span>
-    </div>
-    <h3 class="text-2xl font-bold mb-3">Building Scalable APIs with Node.js and GraphQL</h3>
-    <p class="text-secondary mb-4">
-      A comprehensive guide to creating efficient, scalable APIs using Node.js and GraphQL, with code examples and best practices.
-    </p>
-    <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
-    
-    <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
-      <p class="text-secondary mb-4">
-        GraphQL has revolutionized how we think about API design. Unlike REST APIs with multiple endpoints, 
-        GraphQL provides a single endpoint that allows clients to request exactly the data they need.
-      </p>
-      <p class="text-secondary mb-4">
-        In this tutorial, we'll build a complete GraphQL API using Node.js, Express, and Apollo Server. 
-        We'll cover schema design, resolvers, authentication, and performance optimization techniques.
-      </p>
-      <h4 class="text-xl font-semibold mb-3 text-primary">Setting Up the Project</h4>
-      <pre class="bg-secondary p-4 rounded-lg overflow-x-auto mb-4">
+        
+        <!-- Blog Post 4 - Technical Tutorial -->
+        <article class="blog-post bg-secondary rounded-lg overflow-hidden shadow-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-secondary">April 5, 2025</span>
+              <span class="text-xs px-3 py-1 bg-accent-primary text-white rounded-full">Tutorial</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Building Scalable APIs with Node.js and GraphQL</h3>
+            <p class="text-secondary mb-4">
+              A comprehensive guide to creating efficient, scalable APIs using Node.js and GraphQL, with code examples and best practices.
+            </p>
+            <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
+            
+            <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
+              <p class="text-secondary mb-4">
+                GraphQL has revolutionized how we think about API design. Unlike REST APIs with multiple endpoints, 
+                GraphQL provides a single endpoint that allows clients to request exactly the data they need.
+              </p>
+              <p class="text-secondary mb-4">
+                In this tutorial, we'll build a complete GraphQL API using Node.js, Express, and Apollo Server. 
+                We'll cover schema design, resolvers, authentication, and performance optimization techniques.
+              </p>
+              <h4 class="text-xl font-semibold mb-3 text-primary">Setting Up the Project</h4>
+              <pre class="bg-primary p-4 rounded-lg overflow-x-auto mb-4">
 <code>npm init -y
 npm install apollo-server-express express graphql jsonwebtoken bcryptjs
 npm install -D nodemon</code></pre>
-      <p class="text-secondary mb-4">
-        Let's start by creating a basic Express server and setting up Apollo Server...
-      </p>
-      <!-- More detailed tutorial content -->
-    </div>
-  </div>
-</article>
+              <p class="text-secondary mb-4">
+                Let's start by creating a basic Express server and setting up Apollo Server...
+              </p>
+              <p class="text-secondary mb-4">
+                First, create an index.js file and set up the basic Express server:
+              </p>
+              <pre class="bg-primary p-4 rounded-lg overflow-x-auto mb-4">
+<code>const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers } = require('./schema');
 
-<!-- Blog Post 5 - Case Study -->
-<article class="blog-post bg-primary rounded-lg overflow-hidden shadow-lg">
-  <div class="p-6">
-    <div class="flex justify-between items-center mb-4">
-      <span class="text-sm text-secondary">March 22, 2025</span>
-      <span class="text-xs px-3 py-1 bg-accent-secondary text-white rounded-full">Case Study</span>
+const app = express();
+const server = new ApolloServer({ typeDefs, resolvers });
+
+server.applyMiddleware({ app });
+
+app.listen({ port: 4000 }, () =>
+  console.log(`Server ready at http://localhost:4000${server.graphqlPath}`)
+);</code></pre>
+              <p class="text-secondary mb-4">
+                Now, let's define our GraphQL schema in a separate file called schema.js:
+              </p>
+              <pre class="bg-primary p-4 rounded-lg overflow-x-auto mb-4">
+<code>const { gql } = require('apollo-server-express');
+
+const typeDefs = gql`
+  type User {
+    id: ID!
+    username: String!
+    email: String!
+    createdAt: String!
+  }
+
+  type Query {
+    users: [User]
+    user(id: ID!): User
+  }
+
+  type Mutation {
+    createUser(username: String!, email: String!): User
+  }
+`;
+
+const resolvers = {
+  Query: {
+    users: () => users,
+    user: (parent, { id }) => users.find(user => user.id === id)
+  },
+  Mutation: {
+    createUser: (parent, { username, email }) => {
+      const newUser = {
+        id: String(users.length + 1),
+        username,
+        email,
+        createdAt: new Date().toISOString()
+      };
+      users.push(newUser);
+      return newUser;
+    }
+  }
+};
+
+module.exports = { typeDefs, resolvers };</code></pre>
+              <p class="text-secondary">
+                This is just the beginning of what you can do with GraphQL. From here, you can add authentication,
+                database integration, and more complex queries and mutations. The beauty of GraphQL is its flexibility
+                and efficiency in data fetching.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Blog Post 5 - Case Study -->
+        <article class="blog-post bg-secondary rounded-lg overflow-hidden shadow-lg">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-secondary">March 22, 2025</span>
+              <span class="text-xs px-3 py-1 bg-accent-secondary text-white rounded-full">Case Study</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Case Study: Redesigning E-commerce Checkout Process</h3>
+            <p class="text-secondary mb-4">
+              How I improved conversion rates by 35% through UX research and implementation of a streamlined checkout flow.
+            </p>
+            <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
+            
+            <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
+              <p class="text-secondary mb-4">
+                The e-commerce company was experiencing a 70% cart abandonment rate during checkout. 
+                After conducting user research and analyzing the existing funnel, I identified several key pain points.
+              </p>
+              <p class="text-secondary mb-4">
+                The redesign focused on reducing cognitive load, improving form usability, and implementing a 
+                one-page checkout experience. The result was a 35% increase in completed transactions.
+              </p>
+              <h4 class="text-xl font-semibold mb-3 text-primary">Research Phase</h4>
+              <p class="text-secondary mb-4">
+                I began by analyzing the existing checkout funnel using Google Analytics and Hotjar heatmaps. 
+                This revealed that users were dropping off at specific points in the process, particularly when 
+                asked to create an account and when entering shipping information.
+              </p>
+              <p class="text-secondary mb-4">
+                User interviews and surveys confirmed these findings. Customers expressed frustration with the 
+                multi-page checkout process and the requirement to create an account before purchasing.
+              </p>
+              <h4 class="text-xl font-semibold mb-3 text-primary">Design Solution</h4>
+              <p class="text-secondary mb-4">
+                Based on the research, I designed a one-page checkout with the following key improvements:
+              </p>
+              <ul class="text-secondary mb-4 list-disc pl-6">
+                <li>Guest checkout option with account creation as an optional step</li>
+                <li>Progress indicator showing users exactly where they are in the process</li>
+                <li>Smart form fields with autocomplete and validation</li>
+                <li>Multiple payment options with saved payment methods for returning customers</li>
+                <li>Mobile-optimized design with larger touch targets</li>
+              </ul>
+              <h4 class="text-xl font-semibold mb-3 text-primary">Implementation and Results</h4>
+              <p class="text-secondary mb-4">
+                The new checkout was implemented using React with a focus on performance and accessibility. 
+                A/B testing was conducted with 50% of traffic directed to the new design.
+              </p>
+              <p class="text-secondary mb-4">
+                After two weeks of testing, the new checkout showed:
+              </p>
+              <ul class="text-secondary mb-4 list-disc pl-6">
+                <li>35% increase in conversion rate</li>
+                <li>40% reduction in time to complete checkout</li>
+                <li>25% decrease in customer support inquiries related to checkout issues</li>
+                <li>20% increase in mobile conversion specifically</li>
+              </ul>
+              <p class="text-secondary">
+                This case study demonstrates how user-centered design and data-driven decisions can significantly 
+                impact business metrics. The key was identifying specific pain points and addressing them with 
+                targeted solutions rather than redesigning the entire experience.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-    <h3 class="text-2xl font-bold mb-3">Case Study: Redesigning E-commerce Checkout Process</h3>
-    <p class="text-secondary mb-4">
-      How I improved conversion rates by 35% through UX research and implementation of a streamlined checkout flow.
-    </p>
-    <button class="read-more text-accent-primary hover:text-accent-secondary transition">Read More</button>
-    
-    <div class="full-post hidden mt-6 border-t border-gray-700 pt-6">
-      <p class="text-secondary mb-4">
-        The e-commerce company was experiencing a 70% cart abandonment rate during checkout. 
-        After conducting user research and analyzing the existing funnel, I identified several key pain points.
-      </p>
-      <p class="text-secondary mb-4">
-        The redesign focused on reducing cognitive load, improving form usability, and implementing a 
-        one-page checkout experience. The result was a 35% increase in completed transactions.
-      </p>
-      <!-- More detailed case study content -->
-    </div>
-  </div>
-</article>
-  <!-- Enhanced Project Card -->
-<div class="project-card rounded-lg overflow-hidden bg-secondary shadow-lg" data-categories="fullstack">
-  <img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528_960_720.jpg" alt="Pet Adoption Platform" class="w-full h-48 object-cover">
-  <div class="p-6">
-    <div class="flex flex-wrap gap-2 mb-3">
-      <span class="project-tag text-xs px-2 py-1 rounded text-white">Node.js</span>
-      <span class="project-tag text-xs px-2 py-1 rounded text-white">Express</span>
-      <span class="project-tag text-xs px-2 py-1 rounded text-white">MongoDB</span>
-      <span class="project-tag text-xs px-2 py-1 rounded text-white">Vue.js</span>
-    </div>
-    <h3 class="text-xl font-bold mb-2">Pet Adoption Platform</h3>
-    <p class="text-secondary mb-4">A full-stack application connecting pet owners with adopters, featuring messaging, user profiles, and pet listings.</p>
-    
-    <!-- Added detailed technical information -->
-    <div class="tech-details mb-4">
-      <h4 class="font-semibold mb-2">Technical Implementation:</h4>
-      <ul class="text-sm text-secondary space-y-1">
-        <li>• RESTful API with Express.js and JWT authentication</li>
-        <li>• Real-time messaging using Socket.io</li>
-        <li>• MongoDB with Mongoose ODM for data modeling</li>
-        <li>• Vue.js frontend with Vuex for state management</li>
-        <li>• Responsive design with Tailwind CSS</li>
-        <li>• Docker containerization for deployment</li>
-      </ul>
-    </div>
-    
-    <!-- Added project outcomes -->
-    <div class="project-outcomes mb-4">
-      <h4 class="font-semibold mb-2">Project Outcomes:</h4>
-      <p class="text-sm text-secondary">
-        Increased pet adoption rates by 45% for partner shelters. 
-        Reduced average time to adoption from 45 days to 22 days.
-      </p>
-    </div>
-    
-    <div class="flex space-x-4">
-      <a href="javascript:void(0)" class="btn-primary px-4 py-2 rounded text-white text-sm">
-        Live Demo
-      </a>
-      <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
-        Source Code
-      </a>
-      <a href="javascript:void(0)" class="btn-outline px-4 py-2 rounded text-primary text-sm">
-        Case Study
-      </a>
-    </div>
-  </div>
-</div>
-  <!-- Testimonials Section -->
-<section id="testimonials" class="section-container bg-secondary">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-      Client <span class="gradient-text">Testimonials</span>
-    </h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card bg-primary rounded-lg p-6 shadow-lg">
-        <div class="flex items-center mb-4">
-          <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold">Sarah Johnson</h4>
-            <p class="text-sm text-secondary">CEO, TechStart Inc.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section-container bg-secondary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Frequently Asked <span class="gradient-text">Questions</span>
+      </h2>
+      
+      <div class="max-w-3xl mx-auto">
+        <div class="faq-item mb-6">
+          <button class="faq-question w-full text-left p-4 bg-primary rounded-lg flex justify-between items-center">
+            <span class="font-semibold">What technologies do you specialize in?</span>
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden p-4 text-secondary">
+            I specialize in JavaScript ecosystem including React, Vue.js, and Node.js. I also have extensive experience with 
+            MongoDB, PostgreSQL, Docker, and cloud platforms like AWS and Google Cloud. For UI/UX, I work with Figma, 
+            Adobe XD, and have a strong understanding of accessibility principles.
           </div>
         </div>
-        <p class="text-secondary">
-          "Stephen's expertise in both frontend and backend development was invaluable for our project. 
-          He delivered a robust solution that exceeded our expectations and significantly improved our user engagement metrics."
-        </p>
-      </div>
-      <!-- Resources Section -->
-<section id="resources" class="section-container bg-primary">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-      Developer <span class="gradient-text">Resources</span>
-    </h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Resource 1 -->
-      <div class="resource-card bg-secondary rounded-lg p-6 shadow-lg">
-        <div class="flex items-center mb-4">
-          <i class="fas fa-code text-accent-primary text-2xl mr-3"></i>
-          <h3 class="text-xl font-semibold">Code Snippets Library</h3>
+        
+        <div class="faq-item mb-6">
+          <button class="faq-question w-full text-left p-4 bg-primary rounded-lg flex justify-between items-center">
+            <span class="font-semibold">How do you approach a new project?</span>
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden p-4 text-secondary">
+            I start by understanding the business goals and user needs through research and stakeholder interviews. 
+            Then I create a technical architecture that balances scalability, performance, and maintainability. 
+            I prefer an iterative approach with regular feedback loops to ensure the final product meets all requirements.
+          </div>
         </div>
-        <p class="text-secondary mb-4">
-          A collection of reusable code snippets for common development tasks across multiple languages.
-        </p>
-        <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Explore Snippets</a>
-      </div>
-      
-      <!-- Resource 2 -->
-      <div class="resource-card bg-secondary rounded-lg p-6 shadow-lg">
-        <div class="flex items-center mb-4">
-          <i class="fas fa-tools text-accent-secondary text-2xl mr-3"></i>
-          <h3 class="text-xl font-semibold">Development Tools</h3>
+        
+        <div class="faq-item mb-6">
+          <button class="faq-question w-full text-left p-4 bg-primary rounded-lg flex justify-between items-center">
+            <span class="font-semibold">Can you work with our existing team?</span>
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden p-4 text-secondary">
+            Absolutely! I have extensive experience collaborating with diverse teams, including in-house developers, 
+            designers, and project managers. I'm comfortable with agile methodologies and can adapt to your existing 
+            workflows while bringing fresh perspectives and technical expertise.
+          </div>
         </div>
-        <p class="text-secondary mb-4">
-          Curated list of essential tools and extensions that improve productivity and code quality.
-        </p>
-        <a href="#" class="text-accent-primary hover:text-accent-secondary transition">View Tools</a>
-      </div>
-      
-      <!-- Resource 3 -->
-      <div class="resource-card bg-secondary rounded-lg p-6 shadow-lg">
-        <div class="flex items-center mb-4">
-          <i class="fas fa-book text-accent-tertiary text-2xl mr-3"></i>
-          <h3 class="text-xl font-semibold">Learning Paths</h3>
+        
+        <div class="faq-item mb-6">
+          <button class="faq-question w-full text-left p-4 bg-primary rounded-lg flex justify-between items-center">
+            <span class="font-semibold">What is your typical project timeline?</span>
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden p-4 text-secondary">
+            Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, 
+            while a complex web application could take 3-6 months or more. I always provide detailed project 
+            estimates and milestones before starting, and I'm committed to meeting deadlines while maintaining quality.
+          </div>
         </div>
-        <p class="text-secondary mb-4">
-          Structured learning guides for mastering different technologies and frameworks.
-        </p>
-        <a href="#" class="text-accent-primary hover:text-accent-secondary transition">Start Learning</a>
+        
+        <div class="faq-item mb-6">
+          <button class="faq-question w-full text-left p-4 bg-primary rounded-lg flex justify-between items-center">
+            <span class="font-semibold">Do you provide ongoing support after project completion?</span>
+            <i class="fas fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="faq-answer hidden p-4 text-secondary">
+            Yes, I offer various support packages tailored to your needs. This can include bug fixes, security updates, 
+            feature enhancements, and performance optimization. I believe in building long-term relationships with clients 
+            and ensuring your digital products continue to evolve and perform well over time.
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-      
-      <!-- More testimonials -->
-    </div>
-  </div>
-</section>
-  <!-- FAQ Section -->
-<section id="faq" class="section-container bg-primary">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-      Frequently Asked <span class="gradient-text">Questions</span>
-    </h2>
-    
-    <div class="max-w-3xl mx-auto">
-      <div class="faq-item mb-6">
-        <button class="faq-question w-full text-left p-4 bg-secondary rounded-lg flex justify-between items-center">
-          <span class="font-semibold">What technologies do you specialize in?</span>
-          <i class="fas fa-chevron-down transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden p-4 text-secondary">
-          I specialize in JavaScript ecosystem including React, Vue.js, and Node.js. I also have extensive experience with 
-          MongoDB, PostgreSQL, Docker, and cloud platforms like AWS and Google Cloud. For UI/UX, I work with Figma, 
-          Adobe XD, and have a strong understanding of accessibility principles.
-        </div>
-      </div>
-      
-      <div class="faq-item mb-6">
-        <button class="faq-question w-full text-left p-4 bg-secondary rounded-lg flex justify-between items-center">
-          <span class="font-semibold">How do you approach a new project?</span>
-          <i class="fas fa-chevron-down transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden p-4 text-secondary">
-          I start by understanding the business goals and user needs through research and stakeholder interviews. 
-          Then I create a technical architecture that balances scalability, performance, and maintainability. 
-          I prefer an iterative approach with regular feedback loops to ensure the final product meets all requirements.
-        </div>
-      </div>
-      
-      <!-- More FAQ items -->
-    </div>
-  </div>
-</section>
-  <!-- Newsletter Section -->
-<section id="newsletter" class="section-container bg-secondary">
-  <div class="container mx-auto px-4">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        Join My <span class="gradient-text">Newsletter</span>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-container bg-primary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Client <span class="gradient-text">Testimonials</span>
       </h2>
-      <p class="text-secondary mb-8">
-        Get weekly updates on web development trends, tutorials, and exclusive resources delivered to your inbox.
-      </p>
       
-      <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-        <input 
-          type="email" 
-          placeholder="Enter your email" 
-          class="flex-grow px-4 py-3 rounded-lg bg-primary text-primary border border-gray-700 focus:outline-none focus:border-accent-primary"
-          required
-        >
-        <button type="submit" class="btn-primary px-6 py-3 rounded-lg text-white font-medium">
-          Subscribe
-        </button>
-      </form>
-      
-      <p class="text-sm text-secondary mt-4">
-        No spam. Unsubscribe at any time.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Sarah Johnson</h4>
+              <p class="text-sm text-secondary">CEO, TechStart Inc.</p>
+            </div>
+          </div>
+          <p class="text-secondary">
+            "Stephen's expertise in both frontend and backend development was invaluable for our project. 
+            He delivered a robust solution that exceeded our expectations and significantly improved our user engagement metrics."
+          </p>
+          <div class="flex mt-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://picsum.photos/seed/person2/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Michael Chen</h4>
+              <p class="text-sm text-secondary">CTO, DataFlow Solutions</p>
+            </div>
+          </div>
+          <p class="text-secondary">
+            "Working with Stephen was a game-changer for our startup. His technical skills are matched only by his 
+            ability to understand our business needs and translate them into effective digital solutions."
+          </p>
+          <div class="flex mt-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://picsum.photos/seed/person3/60/60.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold">Emily Rodriguez</h4>
+              <p class="text-sm text-secondary">Product Manager, RetailMax</p>
+            </div>
+          </div>
+          <p class="text-secondary">
+            "Stephen's attention to detail and commitment to quality is unmatched. He took our vague concept and 
+            turned it into a polished, user-friendly application that our customers love. Highly recommended!"
+          </p>
+          <div class="flex mt-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="section-container bg-secondary">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Join My <span class="gradient-text">Newsletter</span>
+        </h2>
+        <p class="text-secondary mb-8">
+          Get weekly updates on web development trends, tutorials, and exclusive resources delivered to your inbox.
+        </p>
+        
+        <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-grow px-4 py-3 rounded-lg bg-primary text-primary border border-gray-700 focus:outline-none focus:border-accent-primary"
+            required
+          >
+          <button type="submit" class="btn-primary px-6 py-3 rounded-lg text-white font-medium">
+            Subscribe
+          </button>
+        </form>
+        
+        <p class="text-sm text-secondary mt-4">
+          No spam. Unsubscribe at any time.
+        </p>
+      </div>
+    </div>
+  </section>
 
    <!-- Contact Section -->
   <section id="contact" class="section-container bg-primary">
@@ -1098,40 +1395,6 @@ npm install -D nodemon</code></pre>
   </footer>
 
   <script id="app-script">
-    <script>
-<script>
-// Add to your existing app-script
-
-// FAQ Toggle
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const answer = button.nextElementSibling;
-    const icon = button.querySelector('i');
-    
-    answer.classList.toggle('hidden');
-    icon.classList.toggle('rotate-180');
-  });
-});
-
-// Newsletter Form
-const newsletterForm = document.querySelector('#newsletter form');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Show success message
-    const notification = document.createElement('div');
-    notification.className = 'fixed bottom-4 right-4 bg-accent-primary text-white px-4 py-2 rounded shadow-lg z-50';
-    notification.textContent = 'Successfully subscribed to newsletter!';
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-      notification.remove();
-    }, 3000);
-    
-    newsletterForm.reset();
-  });
-}
     // DOM Elements
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
@@ -1359,6 +1622,37 @@ if (newsletterForm) {
       });
     }
 
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Newsletter Form
+    const newsletterForm = document.querySelector('#newsletter form');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show success message
+        const notification = document.createElement('div');
+        notification.className = 'fixed bottom-4 right-4 bg-accent-primary text-white px-4 py-2 rounded shadow-lg z-50';
+        notification.textContent = 'Successfully subscribed to newsletter!';
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+          notification.remove();
+        }, 3000);
+        
+        newsletterForm.reset();
+      });
+    }
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -1414,8 +1708,3 @@ if (newsletterForm) {
 </body>
 
 </html>
-
-
-
-
-
