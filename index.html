@@ -179,44 +179,60 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="section-container flex items-center justify-center bg-primary">
-    <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8">
-      <div class="md:w-1/2 space-y-6 animate__animated animate__fadeInLeft">
-        <h1 class="text-4xl md:text-6xl font-bold">
-          Hey, I'm <span class="gradient-text">UMEANASONYE CHIKA STEPHEN</span>
-        </h1>
-        <p class="text-xl text-secondary">
-          Full Stack Developer & UI/UX Enthusiast.
-        </p>
+ <!-- Hero Section -->
+<section id="home" class="section-container flex items-center justify-center bg-primary">
+  <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8">
+    <div class="md:w-1/2 space-y-6 animate__animated animate__fadeInLeft">
+      <h1 class="text-4xl md:text-6xl font-bold">
+        Hey, I'm <span class="gradient-text">UMEANASONYE CHIKA STEPHEN</span>
+      </h1>
+      <p class="text-xl text-secondary">
+        Full Stack Developer & UI/UX Enthusiast.
+      </p>
+      
+      <div id="hero-text-container" class="relative">
         <p class="text-lg text-secondary max-w-lg">
-          I create elegant solutions to complex problems with clean, efficient code and beautiful interfaces.I'm a passionate IT professional with a strong focus on solving complex technical problems and designing clean, user-friendly interfaces. <br> With expertise in both backend systems and frontend experiences, I bridge the gap between functionality and design to deliver solutions that are efficient, intuitive, and impactful. <br>
-
-As an IT problem solver, I specialize in diagnosing and resolving system, software, and network issues with speed and precision. <br> My ability to troubleshoot under pressure and provide reliable solutions makes me a trusted partner in any tech environment. <br>
-
-On the UI/UX side, I create thoughtful, user-centered designs that prioritize usability, accessibility, and aesthetic appeal. <br> Whether it's a web app, mobile interface, or digital product, I design with the end user in
+          I create elegant solutions to complex problems with clean, efficient code and beautiful interfaces. I'm a passionate IT professional with a strong focus on solving complex technical problems and designing clean, user-friendly interfaces.
         </p>
-        <div class="flex space-x-4 pt-4">
-          <a href="#projects" class="btn-primary px-6 py-3 rounded-lg text-white font-medium">
-            View Projects
-          </a>
-          <a href="#contact" class="btn-outline px-6 py-3 rounded-lg text-primary font-medium">
-            Get In Touch
-          </a>
+        
+        <div id="hero-more-text" class="overflow-hidden transition-all duration-300 max-h-0">
+          <p class="text-lg text-secondary max-w-lg">
+            With expertise in both backend systems and frontend experiences, I bridge the gap between functionality and design to deliver solutions that are efficient, intuitive, and impactful.
+          </p>
+          <p class="text-lg text-secondary max-w-lg">
+            As an IT problem solver, I specialize in diagnosing and resolving system, software, and network issues with speed and precision. My ability to troubleshoot under pressure and provide reliable solutions makes me a trusted partner in any tech environment.
+          </p>
+          <p class="text-lg text-secondary max-w-lg">
+            On the UI/UX side, I create thoughtful, user-centered designs that prioritize usability, accessibility, and aesthetic appeal. Whether it's a web app, mobile interface, or digital product, I design with the end user in mind.
+          </p>
         </div>
       </div>
-      <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
-        <div class="relative w-64 h-64 md:w-80 md:h-80">
-          <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-lg opacity-30"></div>
-          <img 
-            src="me.jpg" 
-            alt="Developer portrait" 
-            class="rounded-full w-full h-full object-cover border-4 border-gray-800 shadow-lg relative z-10"
-          >
-        </div>
+      
+      <button id="hero-toggle-btn" class="text-purple-600 hover:text-purple-800 font-medium transition-colors duration-200">
+        Read More <i class="fas fa-chevron-down ml-1"></i>
+      </button>
+      
+      <div class="flex space-x-4 pt-4">
+        <a href="#projects" class="btn-primary px-6 py-3 rounded-lg text-white font-medium">
+          View Projects
+        </a>
+        <a href="#contact" class="btn-outline px-6 py-3 rounded-lg text-primary font-medium">
+          Get In Touch
+        </a>
       </div>
     </div>
-  </section>
+    <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
+      <div class="relative w-64 h-64 md:w-80 md:h-80">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-lg opacity-30"></div>
+        <img 
+          src="me.jpg" 
+          alt="Developer portrait" 
+          class="rounded-full w-full h-full object-cover border-4 border-gray-800 shadow-lg relative z-10"
+        >
+      </div>
+    </div>
+  </div>
+</section>
 
  <!-- About Section -->
 <section id="about" class="section-container bg-secondary">
@@ -253,13 +269,6 @@ On the UI/UX side, I create thoughtful, user-centered designs that prioritize us
           Read More <i class="fas fa-chevron-down ml-1"></i>
         </button>
       </div>
-      
-      <!-- Add the right side content if needed -->
-      <div class="md:w-1/2">
-        <!-- You can add skills, timeline, or other content here -->
-      </div>
-    </div>
-  </div>
 </section>
         
         <div class="md:w-1/2">
@@ -1741,8 +1750,28 @@ module.exports = { typeDefs, resolvers };</code></pre>
       }
     });
   });
+    // Hero section toggle (new implementation)
+    const heroToggleBtn = document.getElementById('hero-toggle-btn');
+    const heroMoreText = document.getElementById('hero-more-text');
+    let isHeroExpanded = false;
+    
+    if (heroToggleBtn) {
+      heroToggleBtn.addEventListener('click', function() {
+        isHeroExpanded = !isHeroExpanded;
+        
+        if (isHeroExpanded) {
+          heroMoreText.style.maxHeight = heroMoreText.scrollHeight + 'px';
+          heroToggleBtn.innerHTML = 'Show Less <i class="fas fa-chevron-up ml-1"></i>';
+        } else {
+          heroMoreText.style.maxHeight = '0';
+          heroToggleBtn.innerHTML = 'Read More <i class="fas fa-chevron-down ml-1"></i>';
+        }
+      });
+    }
+  });
 </script>
 </body>
 
 </html>
+
 
